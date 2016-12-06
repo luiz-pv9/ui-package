@@ -1,6 +1,6 @@
 {
   "name": "ui-package",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Native components UI toolkit",
   "scripts": {
     "doc-server": "php -S localhost:8080",
