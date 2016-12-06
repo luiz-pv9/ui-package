@@ -1,0 +1,18 @@
+{
+  "name": "ui-package",
+  "version": "0.0.1",
+  "description": "Native components UI toolkit",
+  "scripts": {
+    "doc-server": "php -S localhost:8080",
+    "dev": "gulp watch",
+    "prod": "gulp --production"
+  },
+  "devDependencies": {
+    "ejs": "^2.5.3",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "laravel-elixir": "^6.0.0-15",
+    "laravel-elixir-rollup-official": "^1.1.0",
+    "laravel-elixir-webpack-official": "^1.0.9"
+  }
+}

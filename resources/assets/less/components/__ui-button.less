@@ -1,0 +1,250 @@
+@import "../variables";
+
+/**
+ * Button variations:
+ *
+ * Style (3) - default, primary and ghost
+ * Size (4) - tiny, medium, big and large
+ * Animation (4) - tiny, medium, big and large
+ * Icon (8) - tiny, medium, big, large, ghost tiny, ghost medium, ghost big and ghost large
+ * Icon right (8) - tiny, medium, big, large, ghost tiny, ghost medium, ghost big and ghost large
+ * Button group horizontal (4) - tiny, medium, big and large
+ * BUtton group vertical (4) - tiny, medium, big and large
+ */
+
+/**
+ * =============================================================================
+ * VARIABLES
+ * =============================================================================
+ */
+
+
+/**
+ * =============================================================================
+ * STYLES - default, primary and ghost.
+ * =============================================================================
+ */
+
+/**
+ * =============================================================================
+ * SIZES - tiny, default, big and large.
+ * =============================================================================
+ */
+
+/** 
+ * =============================================================================
+ * ANIMATION - tiny, default, big and large.
+ * =============================================================================
+ */
+
+/**
+ * =============================================================================
+ * ICONS LEFT - tiny, default, big, large, tiny ghost, default ghost, big ghost
+ *              and large ghost.
+ * =============================================================================
+ */
+
+/**
+ * =============================================================================
+ * ICONS RIGHT - tiny, default, big, large, tiny ghost, default ghost, big ghost
+ *              and large ghost.
+ * =============================================================================
+ */
+
+/**
+ * =============================================================================
+ * BUTTON GROUP HORIZONTAL - tiny, default, big and large
+ * =============================================================================
+ */
+
+/**
+ * =============================================================================
+ * BUTTON GROUP VERTICAL - tiny, default, big and large
+ * =============================================================================
+ */
+
+@tiny-height: 21px;
+@tiny-line-height: @tiny-height - 2px;
+
+@medium-height: 27px;
+@big-height: 35px;
+@large-height: 42px;
+
+ui-button {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  line-height: 1.5;
+  color: #666;
+  background-color: #f7f7f7;
+  border: 1px solid #d9d9d9;
+  padding: 0 15px;
+  font-size: 12px;
+  border-radius: 2px;
+  height: @medium-height;
+  line-height: @medium-height;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: #efefef;
+    color: #444;
+  }
+}
+
+/**
+ * Sizes
+ */
+
+ui-button.tiny {
+  font-size: 11px;
+  height: @tiny-height;
+  line-height: @tiny-line-height;
+}
+
+ui-button.big {
+  font-size: 14px;
+  height: @big-height;
+  line-height: @big-height;
+}
+
+ui-button.large {
+  font-size: 16px;
+  height: @large-height;
+  line-height: @large-height;
+}
+
+/**
+ * Colors
+ */
+
+ui-button.primary {
+  color: #fff;
+  background-color: @primary;
+  border-color: @primary;
+  transition: opacity 0.5s;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:active {
+    background-color: @primary-active;
+    border-color: @primary-active;
+  }
+}
+
+ui-button.ghost {
+  border-style: dashed;
+  background-color: #fff;
+  border-color: #b9b9b9;
+  transition: border 0.5s, color 0.5s;
+
+  &:hover {
+    color: @primary;
+    border-color: @primary;
+  }
+
+  &:active {
+    transition: none;
+    color: @primary-active;
+    border-color: @primary-active;
+  }
+}
+
+/**
+ * Icon + sizes
+ */
+
+ui-button.labeled {
+  padding-left: 40px;
+  padding-right: 10px;
+
+  .fa {
+    width: 16px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 7px 7px 0 7px;
+  }
+}
+
+ui-button.labeled.icon-right {
+  padding-left: 10px;
+  padding-right: 40px;
+
+  .fa {
+    left: inherit;
+    right: 0;
+    padding: 7px 5px 0 7px;
+  }
+}
+
+ui-button.labeled.tiny {
+  padding-left: 35px;
+  .fa {
+    padding: 4px 5px 0 5px;
+  }
+}
+
+ui-button.labeled.icon-right.tiny {
+  padding-left: 10px;
+  padding-right: 35px;
+
+  .fa {
+    padding: 4px 4px 0 5px;
+  }
+}
+
+ui-button.labeled.big {
+  padding-left: 35px;
+  .fa {
+    padding: 9px 5px 0 5px;
+  }
+}
+
+ui-button.labeled.large {
+  padding-left: 40px;
+  .fa {
+    padding: 11px 8px 0 8px;
+  }
+}
+
+/** 
+ * Special case for labeled ghost
+ */
+
+ui-button.ghost.labeled {
+  padding-left: 30px;
+  .fa {
+    background-color: transparent;
+  }
+}
+
+ui-button.ghost.labeled.icon-right {
+  padding-left: 10px;
+  padding-right: 30px;
+  .fa {
+    background-color: transparent;
+  }
+}
+
+/**
+ * Animation + Sizes
+ */
+
+ui-button[animate]:hover .original-content {
+  margin-top: -@medium-height;
+}
+
+ui-button[animate].tiny:hover .original-content {
+  margin-top: -@tiny-line-height;
+}
+
+ui-button .original-content {
+  transition: margin 0.15s ease-out;
+}

@@ -1,0 +1,89 @@
+<div style="padding: 50px 100px;">
+
+  <div class="component">
+    <div class="example">
+      <h1>Button styles</h1>
+      <h2>Buttons have different styles to indicate actions that oppose, complement or have a different emphasis of each other.</h2>
+
+      <ui-button>Default</ui-button>
+      <ui-button class="primary">Primary</ui-button>
+      <ui-button class="ghost">Ghost</ui-button>
+      <ui-button class="positive">Positive</ui-button>
+      <ui-button class="negative">Negative</ui-button>
+    </div>
+  </div>
+
+  <div class="component">
+    <div class="example">
+      <h1>Icons</h1>
+      <h2>Buttons may contain an icon alongs with text or by itself.</h2>
+
+      <ui-button class="icon"><i class="fa fa-cog"></i></ui-button>
+      <ui-button class="ghost" icon="fa fa-cloud-download"></ui-button>
+      <ui-button icon="fa fa-user">Follow</ui-button>
+      <ui-button class="primary" icon="fa fa-arrow-left">Previous</ui-button>
+      <ui-button class="primary icon-right" icon="fa fa-arrow-right">Next</ui-button>
+    </div>
+  </div>
+
+  <div class="component">
+    <div class="example">
+      <h1>Animation</h1>
+      <h2>Buttons may display different content on hover to describe the action better.</h2>
+
+      <ui-button class="primary" animate="Follow" icon="fa fa-user-plus">John Doe</ui-button>
+      <ui-button icon="fa fa-shopping-cart" animate="Shop"></ui-button>
+      <ui-button animate>
+        <div class="content">
+          Upgrate to pro
+        </div>
+        <div class="animate">
+          Only <b style="color: green;">9.99/month</b>
+        </div>
+      </ui-button>
+    </div>
+  </div>
+
+  <div class="component">
+    <div class="example">
+      <h1>Sizes</h1>
+      <h2>A button can have different sizes.</h2>
+
+      <ui-button class="tiny">Tiny</ui-button>
+      <ui-button>Default</ui-button>
+      <ui-button class="big">Big</ui-button>
+      <ui-button class="large">Large</ui-button>
+    </div>
+  </div>
+
+  <div class="component">
+    <div class="example">
+      <h1>Groups</h1>
+      <h2>We can define button groups to group together actions of the same context.</h2>
+
+      <div style="display: flex;">
+        <div class="ui-button-group vertical" style="width: 100px;">
+          <ui-button>Home</ui-button>
+          <ui-button>About</ui-button>
+          <ui-button>Sign in</ui-button>
+          <ui-button>Sign up</ui-button>
+        </div>
+
+        <div class="ui-button-group vertical" style="width: 100px; margin-left: 10px;">
+          <ui-button class="primary" icon="fa fa-home">Home</ui-button>
+          <ui-button class="primary" icon="fa fa-envelope">About</ui-button>
+          <ui-button class="primary" icon="fa fa-sign-in">Sign in</ui-button>
+          <ui-button class="primary" icon="fa fa-user-plus">Sign up</ui-button>
+        </div>
+
+        <div class="ui-button-group vertical" style="width: 100px; margin-left: 10px;">
+          <ui-button class="ghost icon-right" icon="fa fa-home">Home</ui-button>
+          <ui-button class="ghost icon-right" icon="fa fa-envelope">About</ui-button>
+          <ui-button class="ghost icon-right" icon="fa fa-sign-in">Sign in</ui-button>
+          <ui-button class="ghost icon-right" icon="fa fa-user-plus">Sign up</ui-button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

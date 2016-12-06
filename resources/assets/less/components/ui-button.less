@@ -1,0 +1,327 @@
+@import "../variables";
+
+/**
+ * Button variations:
+ *
+ * Style (3) - default, primary and ghost
+ * Size (4) - tiny, medium, big and large
+ * Animation (4) - tiny, medium, big and large
+ * Icon (8) - tiny, medium, big, large, ghost tiny, ghost medium, ghost big and ghost large
+ * Icon right (8) - tiny, medium, big, large, ghost tiny, ghost medium, ghost big and ghost large
+ * Button group horizontal (4) - tiny, medium, big and large
+ * BUtton group vertical (4) - tiny, medium, big and large
+ */
+
+/**
+ * =============================================================================
+ * VARIABLES
+ * =============================================================================
+ */
+
+@tiny-height: 21px;
+@tiny-line-height: @tiny-height - 2px;
+
+@medium-height: 27px;
+@medium-line-height: @medium-height - 1px;
+
+@big-height: 35px;
+@big-line-height: @big-height;
+
+@large-height: 42px;
+@large-line-height: @large-height;
+
+/**
+ * =============================================================================
+ * Default styles and resets
+ * =============================================================================
+ */
+
+
+
+/**
+ * =============================================================================
+ * STYLES - default, primary and ghost.
+ * =============================================================================
+ */
+
+ui-button {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  line-height: 1.5;
+  color: #666;
+  background-color: #f7f7f7;
+  border: 1px solid #d9d9d9;
+  padding: 0 15px;
+  font-size: 12px;
+  border-radius: 4px;
+  height: @medium-height;
+  line-height: @medium-line-height;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: #efefef;
+    color: #444;
+  }
+}
+
+ui-button.primary {
+  color: #fff;
+  background-color: @primary;
+  border-color: @primary;
+  transition: opacity 0.5s;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:active {
+    background-color: @primary-active;
+    border-color: @primary-active;
+  }
+}
+
+ui-button.positive {
+  color: #fff;
+  background-color: @green;
+  border-color: @green-border;
+  transition: opacity 0.5s;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:active {
+    background-color: @green-active;
+    border-color: @green-active;
+  }
+}
+
+ui-button.negative {
+  color: #fff;
+  background-color: @red;
+  border-color: @red-border;
+  transition: opacity 0.5s;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:active {
+    background-color: @red-active;
+    border-color: @red-active;
+  }
+}
+
+ui-button.ghost {
+  border-style: dashed;
+  background-color: #fff;
+  border-color: #b9b9b9;
+  transition: border 0.5s, color 0.5s;
+
+  &:hover {
+    color: @primary;
+    border-color: @primary;
+  }
+
+  &:active {
+    transition: none;
+    color: @primary-active;
+    border-color: @primary-active;
+  }
+}
+
+/**
+ * =============================================================================
+ * SIZES - tiny, default, big and large.
+ * =============================================================================
+ */
+
+ui-button.tiny {
+  font-size: 11px;
+  height: @tiny-height;
+  line-height: @tiny-line-height;
+}
+
+ui-button.big {
+  font-size: 14px;
+  height: @big-height;
+  line-height: @big-height;
+}
+
+ui-button.large {
+  font-size: 16px;
+  height: @large-height;
+  line-height: @large-height;
+}
+
+/** 
+ * =============================================================================
+ * ANIMATION - tiny, default, big and large.
+ * =============================================================================
+ */
+
+ui-button[animate]:hover .content {
+  margin-top: -@medium-line-height;
+}
+
+ui-button[animate].tiny:hover .content {
+  margin-top: -@tiny-line-height;
+}
+
+ui-button[animate].big:hover .content {
+  margin-top: -@big-line-height;
+}
+
+ui-button[animate].large:hover .content {
+  margin-top: -@large-line-height;
+}
+
+ui-button .content {
+  transition: margin 0.15s ease-out;
+}
+
+/**
+ * =============================================================================
+ * SINGLE ICONS - tiny, default, big and large.
+ * =============================================================================
+ */
+
+ui-button.icon {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/**
+ * =============================================================================
+ * ICONS LEFT - tiny, default, big, large, tiny ghost, default ghost, big ghost
+ *              and large ghost.
+ * =============================================================================
+ */
+
+ui-button.icon-left {
+  padding-left: 40px;
+  padding-right: 10px;
+
+  .fa {
+    width: 16px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 5px 7px 0 6px;
+    font-size: 14px;
+  }
+}
+
+ui-button.icon-left.tiny {
+  padding-left: 35px;
+  .fa {
+    padding: 3px 5px 0 4px;
+    font-size: 13px;
+  }
+}
+
+ui-button.icon-left.big {
+  padding-left: 35px;
+  .fa {
+    font-size: 16px;
+    padding: 8px 5px 0 5px;
+  }
+}
+
+ui-button.icon-left.large {
+  padding-left: 40px;
+  .fa {
+    padding: 10px 10px 0 6px;
+    font-size: 20px;
+  }
+}
+
+ui-button.ghost.icon-left {
+  padding-left: 30px;
+  .fa {
+    background-color: transparent;
+  }
+}
+
+/**
+ * =============================================================================
+ * ICONS RIGHT - tiny, default, big, large, tiny ghost, default ghost, big ghost
+ *              and large ghost.
+ * =============================================================================
+ */
+
+
+ui-button.icon-left.icon-right {
+  padding-left: 10px;
+  padding-right: 40px;
+
+  .fa {
+    left: inherit;
+    right: 0;
+    padding: 5px 6px 0 7px;
+  }
+}
+
+ui-button.icon-left.icon-right.tiny {
+  padding-left: 10px;
+  padding-right: 35px;
+
+  .fa {
+    padding: 3px 4px 0 5px;
+  }
+}
+
+ui-button.ghost.icon-left.icon-right {
+  padding-left: 10px;
+  padding-right: 30px;
+  .fa {
+    background-color: transparent;
+  }
+}
+
+/**
+ * =============================================================================
+ * BUTTON GROUP HORIZONTAL - tiny, default, big and large
+ * =============================================================================
+ */
+
+/**
+ * =============================================================================
+ * BUTTON GROUP VERTICAL - tiny, default, big and large
+ * =============================================================================
+ */
+
+.ui-button-group.vertical {
+
+  ui-button {
+    display: block;
+    border-radius: 0;
+    border-top-width: 0;
+  }
+
+  ui-button.primary,ui-button.positive,ui-button.negative {
+    border-bottom-width: 0;
+  }
+
+  ui-button.icon-left {
+    text-align: left;
+  }
+
+  ui-button:first-of-type {
+    border-top-width: 1px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  ui-button:last-of-type {
+    border-bottom-width: 1px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
